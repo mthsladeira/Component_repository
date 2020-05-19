@@ -1,0 +1,1103 @@
+
+
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      <link rel="shortcut icon" href="../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-5.2.0">
+    
+    
+      
+        <title>Paparazzi</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.18ac144a.min.css">
+      
+      
+    
+    
+    
+      
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>body,input{font-family:"Roboto",-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono",SFMono-Regular,Consolas,Menlo,monospace}</style>
+      
+    
+    
+    
+    
+      
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#paparazzi-uav" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid" aria-label="Header">
+    <a href="../../.." title="Comp4Drone Component Repository" class="md-header-nav__button md-logo" aria-label="Comp4Drone Component Repository">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 003-3 3 3 0 00-3-3 3 3 0 00-3 3 3 3 0 003 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    <label class="md-header-nav__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header-nav__title" data-md-component="header-title">
+      
+        <div class="md-header-nav__ellipsis">
+          <span class="md-header-nav__topic md-ellipsis">
+            Comp4Drone Component Repository
+          </span>
+          <span class="md-header-nav__topic md-ellipsis">
+            
+              Paparazzi
+            
+          </span>
+        </div>
+      
+    </div>
+    
+      <label class="md-header-nav__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" data-md-state="active">
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <button type="reset" class="md-search__icon md-icon" aria-label="Clear" data-md-component="search-reset" tabindex="-1">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+        
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="Comp4Drone Component Repository" class="md-nav__button md-logo" aria-label="Comp4Drone Component Repository">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 003-3 3 3 0 00-3-3 3 3 0 00-3 3 3 3 0 003 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    Comp4Drone Component Repository
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../.." title="Home" class="md-nav__link">
+      Home
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../../about/" title="About" class="md-nav__link">
+      About
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3" checked>
+    
+    <label class="md-nav__link" for="nav-3">
+      Components
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="Components" data-md-level="1">
+      <label class="md-nav__title" for="nav-3">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        Components
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../CEA_2/" title="CEA - Reference Architecture Modelling and Code Generation" class="md-nav__link">
+      CEA - Reference Architecture Modelling and Code Generation
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../example/" title="EXAMPLE" class="md-nav__link">
+      EXAMPLE
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3-3" type="checkbox" id="nav-3-3">
+    
+    <label class="md-nav__link" for="nav-3-3">
+      Socs and FPGAs
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="Socs and FPGAs" data-md-level="2">
+      <label class="md-nav__title" for="nav-3-3">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        Socs and FPGAs
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Socs_and_FPGAs/EDI_SoC/" title="EDI SoC" class="md-nav__link">
+      EDI SoC
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Socs_and_FPGAs/TUE/" title="TUE - A compact, lightweight platform (MPSOC FPGA-based, incl. RTOS)" class="md-nav__link">
+      TUE - A compact, lightweight platform (MPSOC FPGA-based, incl. RTOS)
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Socs_and_FPGAs/UNIMORE/" title="UNIMORE - Onboard Compute Platform Desing Methodolgy" class="md-nav__link">
+      UNIMORE - Onboard Compute Platform Desing Methodolgy
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Socs_and_FPGAs/UNISS/" title="UNISS - Onboard Compute Platform Design Paradigm" class="md-nav__link">
+      UNISS - Onboard Compute Platform Design Paradigm
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Socs_and_FPGAs/UNIVAQ/" title="UNIVAQ - Efficient digital implementation of controllers" class="md-nav__link">
+      UNIVAQ - Efficient digital implementation of controllers
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3-4" type="checkbox" id="nav-3-4" checked>
+    
+    <label class="md-nav__link" for="nav-3-4">
+      complete UAS
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="complete UAS" data-md-level="2">
+      <label class="md-nav__title" for="nav-3-4">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        complete UAS
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Paparazzi
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 9h14V7H3v2m0 4h14v-2H3v2m0 4h14v-2H3v2m16 0h2v-2h-2v2m0-10v2h2V7h-2m0 6h2v-2h-2v2z"/></svg>
+        </span>
+      </label>
+    
+    <a href="./" title="Paparazzi" class="md-nav__link md-nav__link--active">
+      Paparazzi
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#description" class="md-nav__link">
+    Description
+  </a>
+  
+    <nav class="md-nav" aria-label="Description">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#current-state" class="md-nav__link">
+    Current state
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#improvements" class="md-nav__link">
+    Improvements
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#overview" class="md-nav__link">
+    Overview
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#system-architecture" class="md-nav__link">
+    System architecture
+  </a>
+  
+    <nav class="md-nav" aria-label="System architecture">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#using-pprzlink-with-the-ground-station" class="md-nav__link">
+    Using Pprzlink with the ground station
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#using-pprzlink-without-the-ground-station" class="md-nav__link">
+    Using Pprzlink without the ground station
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#adding-a-dedicated-board-on-the-drone" class="md-nav__link">
+    Adding a dedicated board on the drone
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#adding-a-module-to-the-autopilot-itself" class="md-nav__link">
+    Adding a module to the autopilot itself
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../SCALIAN/" title="SCALIAN – EZ_Chains SOA* Architecture" class="md-nav__link">
+      SCALIAN – EZ_Chains SOA* Architecture
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3-5" type="checkbox" id="nav-3-5">
+    
+    <label class="md-nav__link" for="nav-3-5">
+      Computer vision and image processing
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="Computer vision and image processing" data-md-level="2">
+      <label class="md-nav__title" for="nav-3-5">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        Computer vision and image processing
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../computer_vision_and_image_processing/BUT/" title="BUT algorithms" class="md-nav__link">
+      BUT algorithms
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../computer_vision_and_image_processing/HIB/" title="HIB - Computer Vision Components for drones" class="md-nav__link">
+      HIB - Computer Vision Components for drones
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../computer_vision_and_image_processing/IMEC_1/" title="IMEC - Hyperspectral payload" class="md-nav__link">
+      IMEC - Hyperspectral payload
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../computer_vision_and_image_processing/IMEC_2/" title="IMEC - Hyperspectral image processing" class="md-nav__link">
+      IMEC - Hyperspectral image processing
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../computer_vision_and_image_processing/INDRA_1/" title="INDRA - Payload (Single Visible HD)" class="md-nav__link">
+      INDRA - Payload (Single Visible HD)
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3-6" type="checkbox" id="nav-3-6">
+    
+    <label class="md-nav__link" for="nav-3-6">
+      Misc
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="Misc" data-md-level="2">
+      <label class="md-nav__title" for="nav-3-6">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        Misc
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../misc/ENSMA_1/" title="ENSMA - Control components that implement potential barriers" class="md-nav__link">
+      ENSMA - Control components that implement potential barriers
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../misc/ENSMA_2/" title="ENSMA - Multi-agent swarm control" class="md-nav__link">
+      ENSMA - Multi-agent swarm control
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../misc/IKERLAN/" title="IKERLAN - Safety function - Pre-Certified SOM" class="md-nav__link">
+      IKERLAN - Safety function - Pre-Certified SOM
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../misc/UDANET_1/" title="UDANET - Smart and predictive energy management system" class="md-nav__link">
+      UDANET - Smart and predictive energy management system
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../misc/UDANET_2/" title="UDANET - AI drone system modules" class="md-nav__link">
+      UDANET - AI drone system modules
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../misc/UWB/" title="UWB - Autonomous drone battery management" class="md-nav__link">
+      UWB - Autonomous drone battery management
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3-7" type="checkbox" id="nav-3-7">
+    
+    <label class="md-nav__link" for="nav-3-7">
+      Positioning
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="Positioning" data-md-level="2">
+      <label class="md-nav__title" for="nav-3-7">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        Positioning
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../positioning/ACCORDE_1/" title="ACCORDE - UWB based indoor positioning" class="md-nav__link">
+      ACCORDE - UWB based indoor positioning
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../positioning/ACCORDE_2/" title="ACCORDE - Multi-antenna GNSS/INS based navigation" class="md-nav__link">
+      ACCORDE - Multi-antenna GNSS/INS based navigation
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../positioning/FADA-CATEC/" title="FADA-CATEC - Indoor positioning module" class="md-nav__link">
+      FADA-CATEC - Indoor positioning module
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../positioning/MODIS/" title="MODIS - multi-sensor positioning" class="md-nav__link">
+      MODIS - multi-sensor positioning
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3-8" type="checkbox" id="nav-3-8">
+    
+    <label class="md-nav__link" for="nav-3-8">
+      Secure communications
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="Secure communications" data-md-level="2">
+      <label class="md-nav__title" for="nav-3-8">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        Secure communications
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../secure_communications/CEA/" title="CEA - TSN Queue Mapper" class="md-nav__link">
+      CEA - TSN Queue Mapper
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../secure_communications/IFAT/" title="IFAT - Trusted communication subarchitecture" class="md-nav__link">
+      IFAT - Trusted communication subarchitecture
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../secure_communications/TNL/" title="TNL - Robust Communication" class="md-nav__link">
+      TNL - Robust Communication
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../../tags.html" title="Tags" class="md-nav__link">
+      Tags
+    </a>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#description" class="md-nav__link">
+    Description
+  </a>
+  
+    <nav class="md-nav" aria-label="Description">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#current-state" class="md-nav__link">
+    Current state
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#improvements" class="md-nav__link">
+    Improvements
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#overview" class="md-nav__link">
+    Overview
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#system-architecture" class="md-nav__link">
+    System architecture
+  </a>
+  
+    <nav class="md-nav" aria-label="System architecture">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#using-pprzlink-with-the-ground-station" class="md-nav__link">
+    Using Pprzlink with the ground station
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#using-pprzlink-without-the-ground-station" class="md-nav__link">
+    Using Pprzlink without the ground station
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#adding-a-dedicated-board-on-the-drone" class="md-nav__link">
+    Adding a dedicated board on the drone
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#adding-a-module-to-the-autopilot-itself" class="md-nav__link">
+    Adding a module to the autopilot itself
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                  
+                
+                
+                <h1 id="paparazzi-uav">Paparazzi UAV</h1>
+<ul>
+<li><strong>ID:</strong> WP3-13</li>
+<li><strong>Contributor:</strong> ENAC</li>
+<li><strong>Owner:</strong> </li>
+<li><strong>Licence:</strong> GPL</li>
+<li><strong>expected TRL:</strong> 5</li>
+<li><strong>KET:</strong> Intelligent mission management, Intelligent outer loop control, Take-off, Landing, Planning and scheduling, Fail-safe mission</li>
+<li><strong>Contact:</strong> <em>fabien.bonneval@enac.fr</em></li>
+</ul>
+<h2 id="description">Description</h2>
+<p>Paparazzi is a complete system of open source hardware and software for Unmanned Aircraft Systems (UAS), including both the airborne autopilot as well as complete ground station mission planning and monitoring software utilizing a bi-directional datalink for telemetry and control.</p>
+<p>Paparazzi has been created at ENAC in 2003, and is now supported by other institutes such as MAVLAB of the TU-Delft, individual developers, and some private UAV companies from several countries.</p>
+<p>The Paparazzi system was initially designed for robust small fixed-wing aircrafts in 2003, but it now support several other configurations and concepts such as high-aspect ratio gliders, multi-rotors, transitioning vehicles, and rovers. Today, Paparazzi flies on 16cm Quark up to 4.3 meter spanned Adler UAV from University of Stuttgart. The popular UAV platform Bebop2 from Parrot2 can also be used to run the Paparazzi software.</p>
+<p>See the <a href="http://wiki.paparazziuav.org/wiki/Main_Page">Wiki</a> and the <a href="https://github.com/paparazzi/paparazzi/">Github repository</a>.</p>
+<h3 id="current-state">Current state</h3>
+<p>Paparazzi is a running, working project, but it lacks some tools to make it more stable.</p>
+<h3 id="improvements">Improvements</h3>
+<p>The methods coming from the WP6 will be applied to the paparazzi architecture and its modules.
+Standards and use case from WP2 and WP1 will also be taken into account.</p>
+<h2 id="overview">Overview</h2>
+<p><img alt="plop" src="../../../img/paparazzi_overview.jpg" />
+<p align="center">Figure 1</p>
+<br/></p>
+<p>The global view of the system (see figure 1) is very typical of UAV systems:</p>
+<ul>
+<li>Ground segment: all the ground software and hardware infrastructures that are used to prepare, monitor and analyze the flight.</li>
+<li>Airborne segment: the aircraft, its hardware parts including payload and all the embedded software to control the flight (from stabilization to decision making).</li>
+<li>Communication segment: defines all the communication links and protocols between the ground and airborne segments.</li>
+<li>Safety link: safety remote control that can be separated from the ground station for short range direct control.</li>
+</ul>
+<h2 id="system-architecture">System architecture</h2>
+<p><img alt="plop" src="../../../img/paparazzi_communication.png" />
+<p align="center">Figure 2</p>
+<br/></p>
+<p>The Paparazzi system architecture is show in Figure 3. The UAV (in blue) is navigating
+autonomously and is monitored and controlled from the ground (in brown). The ground
+control station (GCS), or GCS agent, provides a graphical user interface with telemetry
+data received by the link agent which manages the ground-based radio modem. The link
+agent distributes telemetry data across the network (a single computer, a local network
+or the internet) where it can be used locally or remotely by the: (1) server - an agent that
+logs, distributes, and preprocesses these messages for the GCS and other agents; (2)
+messages - a real-time numeric display of all telemetry data; (3) a number of other useful
+agents. These agents are:</p>
+<ul>
+<li>a GCS-based flight plan editor to modify waypoints</li>
+<li>a UAV simulator to test flight plans and code modifications</li>
+<li>a real-time plotter for graphical telemetry data visualization</li>
+<li>a log plotter for graphical telemetry visualization after a flight</li>
+</ul>
+<p>All of these processes run simultaneously and each module is independently launched
+and can be configured via the Paparazzi Center.</p>
+<p>Communication with the autopilot is based on a custom protocol and message definition, called Pprzlink. Libraries exist for airborne and ground segments, in multiple languages (C, OCaml, Python), and for multiple transport protocols (Serial, UDP, Ivy). On the ground segment, ground control station uses Pprzlink with the Ivy transport. Ivy is a software publish/subscribe bus based on UDP or TCP to exchange text messages.
+There are four ways to extend Paparazzi functionalities:</p>
+<ul>
+<li>Using Pprzlink with the current ground station tools</li>
+<li>Using Pprzlink independently of the ground station tools</li>
+<li>Adding a dedicated board on the drone and using Pprzlink to communicate directly with the autopilot (usually with the serial transport)</li>
+<li>Adding a module to the autopilot itself</li>
+</ul>
+<p>A combination of these options can be used at the same time to achieve specific goals.</p>
+<h3 id="using-pprzlink-with-the-ground-station">Using Pprzlink with the ground station</h3>
+<p>The easier way to interact with Paparazzi is to create a new agent as part of the ground station. All parameters and configuration files are easily accessible, making it easy to interact with the drone or display new data on the GCS. As example, the Interactive Informatics team of ENAC used it to design novel human-drone interactions for safety pilots and adaptable interactions for pilots with disabilities. </p>
+<h3 id="using-pprzlink-without-the-ground-station">Using Pprzlink without the ground station</h3>
+<p>It is also possible to use Pprzlink on the ground by interacting directly with the datalink. This approach gives less high-level services but makes it simpler to exchange custom messages.</p>
+<h3 id="adding-a-dedicated-board-on-the-drone">Adding a dedicated board on the drone</h3>
+<p>Custom dedicated boards (Raspberry or Arduino for instance) can be integrated in the drone and interact with the autopilot through a local link, typically a serial interface between the dedicated board and the autopilot. The type of interaction is the same than with a ground agent. </p>
+<h3 id="adding-a-module-to-the-autopilot-itself">Adding a module to the autopilot itself</h3>
+<p>The modularity of the airborne architecture (see Figure 3) also enables users to write custom modules that will run on the autopilot itself. All sensors data, payload or actuators are then available to this module. Modules are the building blocks of the airborne architecture. These modules can do various things such as handling a specific sensor connected to the autopilot, enhance navigation capabilities, implement custom stabilization or guidance control loops...</p>
+<p><img alt="plop" src="../../../img/paparazzi_airborne_arch.png" />
+<p align="center">Figure 3</p>
+<br/></p>
+<p>Paparazzi also has a simulator based on <a href="http://www.jsbsim.org">JSBSim</a>. The autopilot can be built for both the hardware target and the simulator target. The simulator then uses the same code that will run on the real hardware. Custom modules that use platform specific capabilities must provide alternative code in order to be built for another target, such as the simulator.</p>
+                
+                  
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
+        
+          <a href="../../Socs_and_FPGAs/UNIVAQ/" title="UNIVAQ - Efficient digital implementation of controllers" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+            </div>
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                UNIVAQ - Efficient digital implementation of controllers
+              </div>
+            </div>
+          </a>
+        
+        
+          <a href="../SCALIAN/" title="SCALIAN – EZ_Chains SOA* Architecture" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                SCALIAN – EZ_Chains SOA* Architecture
+              </div>
+            </div>
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        Made with
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+          Material for MkDocs
+        </a>
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../../../assets/javascripts/vendor.d710d30a.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.5f27aba8.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents"}</script>
+      
+      <script>
+        app = initialize({
+          base: "../../..",
+          features: [],
+          search: Object.assign({
+            worker: "../../../assets/javascripts/worker/search.27c6a5e6.min.js"
+          }, typeof search !== "undefined" && search)
+        })
+      </script>
+      
+    
+  </body>
+</html>
